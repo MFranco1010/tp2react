@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap');
+
+body{
+    background-color: green;
+}
+
+.Cont{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+}
+
+.nav{
+    background-color: yellowgreen;
+    border-radius: 15px;
+    padding: 15px;
+    font-family: 'Sulphur Point', sans-serif;
+}
