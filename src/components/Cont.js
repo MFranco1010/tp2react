@@ -1,4 +1,5 @@
 import React from 'react'
+import { Date } from "./Date";
 
 export const Cont = () => {
   return (
@@ -6,7 +7,7 @@ export const Cont = () => {
         <div className='Cont'>
             <h1 className='nav'>Bienvenido</h1>
             <div >
-
+              <Date />
             </div>
         </div>
     </>

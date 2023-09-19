@@ -16,3 +16,18 @@ body{
     padding: 15px;
     font-family: 'Sulphur Point', sans-serif;
 }
+
+.box {
+
+}
+
+.btns {
+    display: flex;
+}
+
+.btn {
+    border-radius: 10px;
+    width: 70px;
+    padding: 5px;
+    margin: 10px;
+}
