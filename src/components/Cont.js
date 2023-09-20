@@ -9,6 +9,7 @@ export const Cont = () => {
             <div >
               <Date />
             </div>
+            <div className='himg'></div>
         </div>
     </>
   )
