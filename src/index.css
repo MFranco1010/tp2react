@@ -48,12 +48,14 @@ body{
     font-size: xx-large;
 }
 
-.himg{
-    background-image: url(/public/favicon.png);
-    border-radius: 50%;
-    margin: 50px;
-    padding: 50px;
-    width: 300px;
-    justify-self: center;
-    align-self: center;
+.img {
+    position: absolute;
+    width: 250px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
 }

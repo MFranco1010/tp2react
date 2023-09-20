@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 import 'moment/locale/es';
+import morningImage from './morning.png';
+import afternoonImage from './afternoon.png';
+import nightImage from './night.png';
+
 
 export const Date = () => {
   const [jump, setJump] = useState(0);
@@ -32,6 +36,19 @@ export const Date = () => {
     setHour(newHour);
   };
 
+  const getImageForTimeOfDay = () => {
+    const currentHour = hour.hours();
+  
+    if (currentHour >= 6 && currentHour < 12) {
+      return morningImage;
+    } else if (currentHour >= 12 && currentHour < 18) {
+      return afternoonImage;
+    } else {
+      return nightImage;
+    }
+  };
+  
+
   return (
     <div className='box'>
       <div className='btns'>
@@ -50,6 +67,9 @@ export const Date = () => {
         <button className='btn' onClick={jumpDate}>+</button>
       </div>
       <p className='now'>{date.format('LLLL')}</p>
+      <div className='flex'>
+        <img className='img' src={getImageForTimeOfDay()} alt='' />
+      </div>
     </div>
   );
 };
