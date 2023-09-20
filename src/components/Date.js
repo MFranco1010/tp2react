@@ -9,7 +9,6 @@ import nightImage from './night.png';
 export const Date = () => {
   const [jump, setJump] = useState(0);
   const [date, setDate] = useState(moment());
-  const [hour, setHour] = useState(moment());
 
   const plusJump = () => {
     setJump(jump + 1);
@@ -38,7 +37,6 @@ export const Date = () => {
 
   const img = () => {
     const Hourr = date.hours();
-  
     if (Hourr >= 6 && Hourr < 12) {
       return morningImage;
     } else if (Hourr >= 12 && Hourr < 18) {
