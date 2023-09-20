@@ -28,22 +28,16 @@ export const Date = () => {
   };
 
   const jumpHour = () => {
-    const newHour = hour.clone().add(1, 'hour');
-    setHour(newHour);
-
-    const updatedDate = date.clone().hour(newHour.hours());
-    setDate(updatedDate);
+    const newDate = date.clone().add(1, 'hour');
+    setDate(newDate);
   };
   const mjumpHour = () => {
-    const newHour = hour.clone().subtract(1, 'hour');
-    setHour(newHour);
-
-    const updatedDate = date.clone().hour(newHour.hours());
-    setDate(updatedDate);
+    const newDate = date.clone().subtract(1, 'hour');
+    setDate(newDate);
   };
 
   const img = () => {
-    const Hourr = hour.hours();
+    const Hourr = date.hours();
   
     if (Hourr >= 6 && Hourr < 12) {
       return morningImage;
