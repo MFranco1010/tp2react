@@ -30,18 +30,24 @@ export const Date = () => {
   const jumpHour = () => {
     const newHour = hour.clone().add(1, 'hour');
     setHour(newHour);
+
+    const updatedDate = date.clone().hour(newHour.hours());
+    setDate(updatedDate);
   };
   const mjumpHour = () => {
     const newHour = hour.clone().subtract(1, 'hour');
     setHour(newHour);
+
+    const updatedDate = date.clone().hour(newHour.hours());
+    setDate(updatedDate);
   };
 
-  const getImageForTimeOfDay = () => {
-    const currentHour = hour.hours();
+  const img = () => {
+    const Hourr = hour.hours();
   
-    if (currentHour >= 6 && currentHour < 12) {
+    if (Hourr >= 6 && Hourr < 12) {
       return morningImage;
-    } else if (currentHour >= 12 && currentHour < 18) {
+    } else if (Hourr >= 12 && Hourr < 18) {
       return afternoonImage;
     } else {
       return nightImage;
@@ -63,12 +69,12 @@ export const Date = () => {
       </div>
       <div className='btns'>
         <button className='btn' onClick={mjumpDate}>-</button>
-        <p>Update fecha</p>
+        <p>Update Fecha</p>
         <button className='btn' onClick={jumpDate}>+</button>
       </div>
       <p className='now'>{date.format('LLLL')}</p>
       <div className='flex'>
-        <img className='img' src={getImageForTimeOfDay()} alt='' />
+        <img className='img' src={img()} alt='' />
       </div>
     </div>
   );
